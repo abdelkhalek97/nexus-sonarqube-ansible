@@ -1,4 +1,12 @@
-- hosts: aws
-  become: True
+- name: config nexus machine 
+  hosts: nexus
+  become: true
   roles:
-   - roles/nexus
+    - roles/nexus
+
+- name: config sonarqube machine 
+  hosts: sonarqube
+  become: true
+  roles:
+    - roles/postgresql
+    - roles/sonarQube
