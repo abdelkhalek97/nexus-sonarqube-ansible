@@ -1,12 +1,22 @@
-- name: config nexus machine 
+---
+- name: Install Nexus
   hosts: nexus
   become: true
-  roles:
+  gather_facts: false
+  vars:
+    ansible_user: ubuntu
+    ansible_become: true
+    ansible_become_method: sudo
+  roles: 
     - roles/nexus
 
-- name: config sonarqube machine 
+
+
+
+- name: Install SonarQube 
   hosts: sonarqube
   become: true
-  roles:
+  gather_facts: false
+  roles: 
     - roles/postgresql
-    - roles/sonarQube
+    - roles/SonarQube
