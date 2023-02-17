@@ -6,8 +6,8 @@ This is a demo ansible , installing nexus and sonarqube on aws private instances
 ## Notes before clonning.
 - terraform builds inventory.txt file automatically when applying terraform.
 - change key_pair names in Terraform/main.tf and in ec2 modules.
-- copy your key to **nexus-sonarqube-ansible** directory
-- chmod 400 your private key
+- copy your key to **nexus-sonarqube-ansible** directory.
+- chmod 400 your private key.
 
 ## Commands to run:
 ### Terraform:
@@ -28,3 +28,8 @@ cd ..
 ```
 ansible-playbook playbook.yml -i inventory.txt
 ```
+### Screenshots From reloading LoadBalancer:
+
+![home_Page Image](./images/nexus.png)
+
+![home_Page Image](./images/sonarqube.png)
